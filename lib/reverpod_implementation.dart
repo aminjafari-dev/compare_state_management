@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:test_optimization_01/todo_entity.dart';
+
 import 'dart:developer' as developer;
 
 final todoProvider =
@@ -25,6 +26,15 @@ class TodoNotifier extends StateNotifier<List<TodoEntity>> {
           todo
     ];
     developer.log('Riverpod toggle time: ${stopwatch.elapsedMicroseconds}µs');
+  }
+}
+
+class ReverpodProviderScope extends StatelessWidget {
+  const ReverpodProviderScope({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const ProviderScope(child: RiverpodScreen());
   }
 }
 

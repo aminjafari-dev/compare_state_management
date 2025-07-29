@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           '/': (_) => const HomeScreen(),
           '/setstate': (_) => const SetStateScreen(),
           '/provider': (_) => const ProviderScreen(),
-          '/riverpod': (_) => const RiverpodScreen(),
+          '/riverpod': (_) => const ReverpodProviderScope(),
           '/bloc': (_) => const BlocScreen(),
         },
       ),
